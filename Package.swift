@@ -16,11 +16,15 @@ let package = Package(
             targets: ["Shared"]),
     ],
     dependencies: [
+        .package(
+                    url: "https://github.com/dennisrjohn/LoopKit.git",
+                    .branch("nudge")
+                )
     ],
     targets: [
         .target(
             name: "Shared",
-            dependencies: [],
+            dependencies: ["LoopKit"],
             path: "ShareClient")
     ]
 )
